@@ -1,3 +1,4 @@
+from pathlib import Path
 import joblib
 import pandas as pd
 import streamlit as st
@@ -7,12 +8,13 @@ from metrics_utils import compute_metrics
 
 st.set_page_config(page_title="Breast Cancer Classifier Lab", page_icon="🔬", layout="wide")
 
+BASE_DIR = Path(__file__).resolve().parent
 MODEL_FILES = {
-    "Logistic Regression": "model/logistic_regression.joblib",
-    "Decision Tree": "model/decision_tree.joblib",
-    "KNN": "model/knn.joblib",
-    "Naive Bayes": "model/naive_bayes.joblib",
-    "Support Vector Machine": "model/support_vector_machine.joblib",
+    "Logistic Regression": BASE_DIR / "model/logistic_regression.joblib",
+    "Decision Tree": BASE_DIR / "model/decision_tree.joblib",
+    "KNN": BASE_DIR / "model/knn.joblib",
+    "Naive Bayes": BASE_DIR / "model/naive_bayes.joblib",
+    "Support Vector Machine": BASE_DIR / "model/support_vector_machine.joblib",
 }
 CLASS_NAMES = ["Malignant (0)", "Benign (1)"]
 
