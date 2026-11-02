@@ -10,7 +10,7 @@ Predict whether a breast tumour is **malignant (0)** or **benign (1)** from meas
 - **Split:** 80/20 stratified (`random_state=42`) → 455 train / 114 test. `test_data.csv` holds the 114 test rows. LogReg, KNN and SVM include a `StandardScaler` inside their pipeline.
 
 ## c. GitHub repository link
-<PASTE YOUR GITHUB REPO URL HERE>
+https://github.com/manishy108/ML_ASSIGNMENT2
 
 ## d. Models used
 Evaluation on the held-out test set (114 rows):
@@ -52,4 +52,4 @@ pip install -r requirements.txt
 python train_models.py     # optional, regenerates models and test_data.csv
 streamlit run app.py
 ```
-Live app: <PASTE YOUR STREAMLIT APP URL HERE>
+Live app: https://mlassignment2-a2cqbrxmdgam3hwokc2tbe.streamlit.app/
